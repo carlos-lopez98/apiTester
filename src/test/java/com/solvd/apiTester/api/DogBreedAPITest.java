@@ -52,5 +52,11 @@ public class DogBreedAPITest {
         getByRandom.validateResponseAgainstSchema("src/test/resources/breeds/_getRandomBreed/rs.schema");
     }
 
-
+    @Test
+    public void getSubBreedByBreed_returnsSubBreedsInList(){
+        LOGGER.info("test");
+        GetSubBreedsByBreed getSubBreedsByBreed = new GetSubBreedsByBreed();
+        getSubBreedsByBreed.callAPIExpectSuccess();
+        getSubBreedsByBreed.validateResponseAgainstSchema("src/test/resources/breeds/_getSubBreedByBreed/rs.schema");
+    }
 }
