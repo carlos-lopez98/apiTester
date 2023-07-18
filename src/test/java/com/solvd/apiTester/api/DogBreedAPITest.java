@@ -59,4 +59,13 @@ public class DogBreedAPITest {
         getSubBreedsByBreed.callAPIExpectSuccess();
         getSubBreedsByBreed.validateResponseAgainstSchema("src/test/resources/breeds/_getSubBreedByBreed/rs.schema");
     }
+
+    @Test
+    public void getSubBreedByNull_returnsError(){
+        LOGGER.info("test");
+        GetSubBreedNull getSubBreedNull = new GetSubBreedNull();
+        getSubBreedNull.expectResponseStatus(HttpResponseStatusType.NOT_FOUND_404);
+        getSubBreedNull.validateResponseAgainstSchema("src/test/resources/breeds/_getSubBreedsByNull/rs.schema");
+    }
+
 }
