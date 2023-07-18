@@ -1,5 +1,0 @@
-{
-  "status": "error",
-  "message": "No route found for \"GET http://dog.ceo/api/breed//list\" with code: 0",
-  "code": 404
-}
