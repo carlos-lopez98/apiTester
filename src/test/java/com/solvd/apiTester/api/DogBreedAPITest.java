@@ -2,6 +2,7 @@ package com.solvd.apiTester.api;
 
 
 import com.zebrunner.carina.api.http.HttpResponseStatusType;
+import com.zebrunner.carina.core.IAbstractTest;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -10,12 +11,12 @@ import com.zebrunner.carina.api.apitools.validation.JsonCompareKeywords;
 import com.zebrunner.carina.core.registrar.ownership.MethodOwner;
 import com.zebrunner.carina.core.registrar.tag.Priority;
 import com.zebrunner.carina.core.registrar.tag.TestPriority;
-import org.testng.annotations.Test;
+import org.junit.jupiter.api.Test;
 
 import java.time.temporal.ChronoUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class DogBreedAPITest {
+public class DogBreedAPITest implements IAbstractTest {
     private final static Logger LOGGER = LogManager.getLogger(DogBreedAPITest.class);
 
 
