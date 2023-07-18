@@ -43,4 +43,14 @@ public class DogBreedAPITest {
         getByBreed.expectResponseStatus(HttpResponseStatusType.NOT_FOUND_404);
         getByBreed.validateResponseAgainstSchema("src/test/resources/breeds/_getByBreed/rs.schema");
     }
+
+    @Test
+    public void getRandomBreed_returnsRandom(){
+        LOGGER.info("test");
+        GetRandomBreed getByRandom = new GetRandomBreed();
+        getByRandom.callAPIExpectSuccess();
+        getByRandom.validateResponseAgainstSchema("src/test/resources/breeds/_getRandomBreed/rs.schema");
+    }
+
+
 }
