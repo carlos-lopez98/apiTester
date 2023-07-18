@@ -13,9 +13,6 @@ import com.zebrunner.carina.core.registrar.tag.Priority;
 import com.zebrunner.carina.core.registrar.tag.TestPriority;
 import org.junit.jupiter.api.Test;
 
-import java.time.temporal.ChronoUnit;
-import java.util.concurrent.atomic.AtomicInteger;
-
 public class DogBreedAPITest implements IAbstractTest {
     private final static Logger LOGGER = LogManager.getLogger(DogBreedAPITest.class);
 
