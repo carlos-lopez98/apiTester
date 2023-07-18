@@ -9,7 +9,7 @@
     <version>1.0</version>
     <packaging>jar</packaging>
     <name>apiTester</name>
-    <url>https://colvd.com</url>
+    <url>https://solvd.com</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -147,7 +147,7 @@
                             <groupId>com.zebrunner</groupId>
                             <artifactId>agent-core</artifactId>
                             <version>${zebrunner-agent.version}</version>
-                            <outputDirectory>${project.build.directory}/agent</outputDirectory>
+                            <outputDirectory>${project.build.directory}\agent</outputDirectory>
                             <destFileName>zebrunner-agent.jar</destFileName>
                         </artifactItem>
                     </artifactItems>
@@ -158,10 +158,10 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.1.0</version>
                 <configuration>
-                    <argLine>-javaagent:${project.build.directory}/agent/zebrunner-agent.jar</argLine>
+                    <argLine>-javaagent:${project.build.directory}\agent\zebrunner-agent.jar</argLine>
                     <useSystemClassLoader>false</useSystemClassLoader>
                     <suiteXmlFiles>
-                        <suiteXmlFile>${project.build.directory}/test-classes/testng_suites/${suite}.xml</suiteXmlFile>
+                        <suiteXmlFile>${project.build.directory}\test-classes\testng_suites\${suite}.xml</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>
